@@ -13,7 +13,7 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-end
+
 
   def follow(other_user)
     followees << other_user
@@ -28,3 +28,4 @@ end
   def followees?(other_user)
     followees.include?(other_user)
   end
+end
