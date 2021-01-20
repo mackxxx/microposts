@@ -14,7 +14,6 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
 
-
   def follow(other_user)
     followees << other_user
   end
